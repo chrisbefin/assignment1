@@ -32,7 +32,10 @@ for line in lines:
                 line = re.sub(' +', ' ', line)#replace multiple spaces with single spaces
                 word_count[current_character] += (len(line.split(' '))-1)
 
+f = open("output.txt", 'w')
 for key in sorted(characters):
-    print("{} ({})" .format(key, word_count[key]))
+    f.write("{} ({}) \n" .format(key, word_count[key]))
     for line in characters[key]:
-        print(line)
+        f.write("{}\n" .format(line))
+
+f.close()
