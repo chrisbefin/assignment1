@@ -2,7 +2,6 @@ import sys
 import re
 
 filename = sys.argv[1]
-
 with open(filename, mode='r') as READ_FILE:
     fileText = READ_FILE.read()
 
@@ -25,9 +24,10 @@ for line in lines:
         elif current_character != None:#someone is speaking
             if not any(word in line for word in reserved_words):#line does not contain any reserved words
                 characters[current_character].append(line)#line is added to the current character's dialogue
-                line = re.sub("([\(\[]).*?([\)\]])", ' ', line)#replace text in brackets with a space
+                line = re.sub("\[-+\]", ' ', line)
                 line = re.sub(' +', ' ', line)#replace multiple spaces with single spaces
                 word_count[current_character] += (len(line.split(' '))-1)
+
 for key in sorted(characters):
     print("{} ({})" .format(key, word_count[key]))
     for line in characters[key]:
