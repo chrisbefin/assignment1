@@ -10,25 +10,25 @@ with open(filename, mode='r') as READ_FILE:
 
 lines = fileText.split('\n')
 reserved_words = ['Exit', 'Enter', 'Aside', 'Exeunt']
-characters = dict()
+characters = dict()#key: character name, value: array of lines spoken
 current_character = None
-word_count = dict()
+word_count = dict()#key: character name, value:words spoken
 
 for line in lines:
-    if len(line) != 0:#not a blank line
+    if len(line) != 0:
         words = line.split(' ')
         if len(words) == 1:
-            if words[0] not in characters:#new character
+            if words[0] not in characters:
                 characters[words[0]] = []
                 word_count[words[0]] = 0
             if current_character != None:
-                characters[current_character].append('\n')#end of a character's line of dialogue
+                characters[current_character].append('\n')
             current_character = words[0]
-        elif current_character != None:#someone is speaking
-            if not any(word in line for word in reserved_words):#line does not contain any reserved words
-                characters[current_character].append(line)#line is added to the current character's dialogue
+        elif current_character != None:
+            if not any(word in line for word in reserved_words):
+                characters[current_character].append(line)
                 line = re.sub("\[-+\]", ' ', line)
-                line = re.sub(' +', ' ', line)#replace multiple spaces with single spaces
+                line = re.sub(' +', ' ', line)
                 word_count[current_character] += (len(line.split(' '))-1)
 
 f = open("output.txt", 'w')
