@@ -1,7 +1,6 @@
-#import sys
 import re
-
 import argparse
+
 parser = argparse.ArgumentParser()
 parser.add_argument("input")
 args = parser.parse_args()
@@ -37,5 +36,4 @@ for key in sorted(characters):
     f.write("{} ({}) \n" .format(key, word_count[key]))
     for line in characters[key]:
         f.write("{}\n" .format(line))
-
 f.close()

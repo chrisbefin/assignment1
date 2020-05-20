@@ -85,7 +85,7 @@ class Mars(Planet):
         return self.orbitalEccentricity
 
     def info(self):
-        return "The planet {} is {} km to its sun and takes {} Earth years to orbit its sun. Mars has an orbital inclination of {} degrees and an orbital eccentricity of {}.".format(self.getName(), self.getDistanceToSun(), self.getOrbitalPeriod(),self.getOrbitalInclination(), self.getOrbitalEccentricity())
+        return "The planet {} is {} km to its sun and takes {} Earth years to orbit its sun. Mars has an orbital inclination of {} degrees and an orbital eccentricity of {}.".format(self.getName(), self.getDistanceToSun(), self.getOrbitalPeriod(), self.getOrbitalInclination(), self.getOrbitalEccentricity())
 
 class Jupiter(Planet):
     def __init__(self):
