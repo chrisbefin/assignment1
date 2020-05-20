@@ -1,4 +1,3 @@
-
 class Planet(object):
     def __init__(self, name, distance=149600000, orbitalPeriod=1.0):
         self.name = name

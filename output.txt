@@ -1,4 +1,4 @@
-BERTRAM (78) 
+BERTRAM (76) 
     And I in going, madam, weep o'er my father's death
     anew: but I must attend his majesty's command, to
     whom I am now in ward, evermore in subjection.
@@ -75,9 +75,10 @@ COUNTESS (330)
 
 
     Heaven bless him! Farewell, Bertram.
+    Exit
 
 
-HELENA (668) 
+HELENA (667) 
     I do affect a sorrow indeed, but I have it too.
 
 
@@ -101,6 +102,8 @@ HELENA (668)
     Of every line and trick of his sweet favour:
     But now he's gone, and my idolatrous fancy
     Must sanctify his reliques. Who comes here?
+    Enter PAROLLES
+    Aside
     One that goes with him: I love him for his sake;
     And yet I know him a notorious liar,
     Think him a great way fool, solely a coward;
@@ -161,6 +164,7 @@ HELENA (668)
     Might with effects of them follow our friends,
     And show what we alone must think, which never
     Return us thanks.
+    Enter Page
 
 
     Monsieur Parolles, you were born under a charitable star.
@@ -198,6 +202,9 @@ HELENA (668)
     So show her merit, that did miss her love?
     The king's disease--my project may deceive me,
     But my intents are fix'd and will not leave me.
+    Exit
+
+
 LAFEU (185) 
     You shall find of the king a husband, madam; you,
     sir, a father: he that so generally is at all times
@@ -244,6 +251,7 @@ LAFEU (185)
 
     Farewell, pretty lady: you must hold the credit of
     your father.
+    Exeunt BERTRAM and LAFEU
 
 
 PAROLLES (490) 
@@ -342,9 +350,11 @@ PAROLLES (490)
     thou hast leisure, say thy prayers; when thou hast
     none, remember thy friends; get thee a good husband,
     and use him as he uses thee; so, farewell.
+    Exit
 
 
 Page (7) 
     Monsieur Parolles, my lord calls for you.
+    Exit
 
 
