@@ -44,7 +44,7 @@ class Mercury(Planet):
 
 class Venus(Planet):
     def __init__(self):
-        Planet.__init__(self, "Earth", 107500000, 0.615)
+        Planet.__init__(self, "Venus", 107500000, 0.615)
         self.gravity = 8.9
         self.density = 5243
 
@@ -169,3 +169,8 @@ class SolarSystem(object):
     def info(self):
         for planet in self.planets:
             print(planet.info())
+
+    def getOrbits(self, days):
+        for planet in self.planets:
+            result = (days / 365.2) / planet.orbitalPeriod
+            print("{} completes {} orbits in {} days." .format(planet.name, result, days))
