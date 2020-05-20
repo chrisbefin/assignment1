@@ -1,7 +1,11 @@
-import sys
+#import sys
 import re
 
-filename = sys.argv[1]
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("input")
+args = parser.parse_args()
+filename = args.input
 with open(filename, mode='r') as READ_FILE:
     fileText = READ_FILE.read()
 
