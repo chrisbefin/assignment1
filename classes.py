@@ -26,11 +26,11 @@ class Planet(object):
         self.orbitalPeriod = orbitalPeriod
 
 
-class Mercury(Planet):
+class Mercury(Planet):#docstrings
     def __init__(self):
         Planet.__init__(self, "Mercury", 57900000, 0.24)
-        self.diameter = 4879
-        self.escapeVelocity = 4.3
+        self.diameter = 4879 #km
+        self.escapeVelocity = 4.3 #km/s
 
     def getDiameter(self):
         return self.diameter
@@ -119,7 +119,7 @@ class Saturn(Planet):
 class Uranus(Planet):
     def __init__(self):
         Planet.__init__(self, "Uranus", 2741300000, 83.76)
-        self.meanTemp = -195
+        self.meanTemp = -195 #deg C
         self.numMoons = 27
 
     def getMeanTemp(self):
@@ -149,8 +149,8 @@ class Neptune(Planet):
 class Pluto(Planet):
     def __init__(self):
         Planet.__init__(self, "Pluto", 5906400000, 247.98)
-        self.surfacePressure = 0.00001
-        self.isPlanet = False
+        self.surfacePressure = 0.00001 #bars
+        self.isPlanet = False #bool
 
     def getSurfacePressure(self):
         return self.surfacePressure
@@ -171,5 +171,5 @@ class SolarSystem(object):
 
     def getOrbits(self, days):
         for planet in self.planets:
-            result = (days / 365.2) / planet.orbitalPeriod
+            result = (days / 365.2) / planet.getOrbitalPeriod
             print("{} completes {} orbits in {} days." .format(planet.name, result, days))
