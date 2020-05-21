@@ -1,5 +1,5 @@
 class Planet(object):
-    def __init__(self, name, distance=149600000, orbitalPeriod=1.0):
+    def __init__(self, name, distance, orbitalPeriod):
         self.name = name
         self.distanceToSun = distance
         self.orbitalPeriod = orbitalPeriod
