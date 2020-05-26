@@ -1,4 +1,4 @@
-BERTRAM (76) 
+BERTRAM (76) (I) 
     And I in going, madam, weep o'er my father's death
     anew: but I must attend his majesty's command, to
     whom I am now in ward, evermore in subjection.
@@ -18,7 +18,7 @@ BERTRAM (76)
     to my mother, your mistress, and make much of her.
 
 
-COUNTESS (330) 
+COUNTESS (332) (HER) 
     In delivering my son from me, I bury a second husband.
 
 
@@ -78,7 +78,7 @@ COUNTESS (330)
     Exit
 
 
-HELENA (667) 
+HELENA (667) (A) 
     I do affect a sorrow indeed, but I have it too.
 
 
@@ -203,9 +203,7 @@ HELENA (667)
     The king's disease--my project may deceive me,
     But my intents are fix'd and will not leave me.
     Exit
-
-
-LAFEU (185) 
+LAFEU (185) (THE) 
     You shall find of the king a husband, madam; you,
     sir, a father: he that so generally is at all times
     good must of necessity hold his virtue to you; whose
@@ -254,7 +252,7 @@ LAFEU (185)
     Exeunt BERTRAM and LAFEU
 
 
-PAROLLES (490) 
+PAROLLES (490) (THE) 
     Save you, fair queen!
 
 
@@ -353,7 +351,7 @@ PAROLLES (490)
     Exit
 
 
-Page (7) 
+Page (7) (MONSIEUR) 
     Monsieur Parolles, my lord calls for you.
     Exit
 
