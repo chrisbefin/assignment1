@@ -19,6 +19,12 @@ class Play(object):
         output(): writes formatted script to the object's outputFile
             arguments: self
             returns: void
+        print(): prints formatted output to the terminal
+            arguments: self
+            returns: void
+        characterSummary():prints summary to terminal for each character
+            arguments: self
+            returns: void
     """
     def __init__(self, inputFile, outputFile):
         self.inputFile = inputFile
@@ -64,7 +70,18 @@ class Play(object):
                 WRITE_FILE.write("{} ({}) ({}) \n".format(character, self.characters[character].getNumWords(),self.characters[character].getFreqWord()))#write character's name with word count and most frequently spoken word
                 for line in self.characters[character].getLines():
                     WRITE_FILE.write("{}\n".format(line))#write all of the character's lines
+    def print(self):
+        for character in sorted(self.characters):
+            print("{} ({}) ({}) \n".format(character, self.characters[character].getNumWords(),self.characters[character].getFreqWord()))#write character's name with word count and most frequently spoken word
+            for line in self.characters[character].getLines():
+                print("{}\n".format(line))#write all of the character's lines
 
+    def characterSummary(self):
+        for character in sorted(self.characters):
+            print("name: {}".format(character))
+            print("words spoken: {}".format(self.characters[character].getNumWords()))
+            print("most spoken word: {}".format(self.characters[character].getFreqWord()))
+            print()
 class Character(object):
     """ class for characters found in the script file being parsed
         data members:
@@ -133,8 +150,9 @@ def main():
     outputFile = args.output
 
     PlayClass = Play(inputFile, outputFile)#create play class
-    PlayClass.parseFile()
-    PlayClass.output()
+    PlayClass.parseFile()#parse script
+    PlayClass.output()#write output to file
+    PlayClass.characterSummary()#print summary to terminal
 
 if __name__ == "__main__":
     main()
