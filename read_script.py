@@ -28,18 +28,18 @@ class Play(object):
     """
     def __init__(self, inputFile, outputFile):
         """
-        __init__(): initializes the object with correct file paths
+        __init__(): initializes the object with correct file paths, the reserved_words list can be added to as needed to identify all stage direction lines appearing in the script
             arguments: self, inputFile<string>, outputFile<string>
             returns: None
         """
         self.inputFile = inputFile
         self.outputFile = outputFile
-        self.characters = dict()
+        self.characters = dict() # key:character name, value: character object
         self.reserved_words = ['Exit', 'Enter', 'Aside', 'Exeunt']
 
     def parseFile(self):
         """
-        parseFile(): primary routine which parses the inputFile and assigns lines to characters and counts the number of words spoken by each character
+        parseFile(): primary routine which parses the inputFile line by line. It creates character objects for each character as they appear in the script and then assigns those character objects lines and updates their word count dict. It identifies stage direction lines using this class' list of reserved words and does not count those toward word count.
         <raises an OSError if input file cannot be opened>
             arguments: self
             returns: None
@@ -77,7 +77,7 @@ class Play(object):
 
     def output(self):
         """
-        output(): writes formatted script to the object's outputFile
+        output(): writes formatted script to the object's outputFile- lines grouped by character and characters organized alphabetically. Word count and most spoken word printed next to each character name. Stage directions are outputted as if they were lines spoken by whoever was talking at the time they were given, however stage directions do not count towards word count.
             arguments: self
             returns: None
         """
@@ -89,7 +89,7 @@ class Play(object):
 
     def print(self):
         """
-        print(): prints formatted output to the terminal
+        print(): prints same formatted output to the terminal as is going into the outputFile
             arguments: self
             returns: None
         """
@@ -100,7 +100,7 @@ class Play(object):
 
     def characterSummary(self):
         """
-        characterSummary(): prints summary to terminal for each character
+        characterSummary(): prints summary to terminal for each character- name, words spoken and most spoken word
             arguments: self
             returns: None
         """
@@ -114,7 +114,7 @@ class Character(object):
     """ class for characters found in the script file being parsed
         data members:
             name: name of the character as it appears in the script
-            lines: a list of lines spoken by the character
+            lines: a list of lines spoken by the character and stage directions appearing while this character is speaking
             words: a dict containing the words spoken by the character and the number of times they are spoken
         methods:
             __init__(): initializes object with correct name and empty lines and words data members.
@@ -201,6 +201,7 @@ def main():
     """ Parses command line arguments and creates a play class to parse input and generate output
         arguments: none
         returns: None
+        <Will return 1 if input file cannot be opened>
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("input", help="file path for text to be parsed")
