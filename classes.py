@@ -780,7 +780,7 @@ class SolarSystem(object):
     """
     def __init__(self):
         """
-        __init__(): initializes planet list with objects
+        __init__(): initializes planets list with objects for each planet in the solar system
             arguments: self
             returns: None
         """
