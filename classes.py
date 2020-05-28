@@ -1,3 +1,5 @@
+#!usr/bin/env python
+
 class Planet(object):
     """ Class which contains data for a planet
         data members:
